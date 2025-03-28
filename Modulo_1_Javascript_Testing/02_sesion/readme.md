@@ -28,10 +28,13 @@ A continuación, se incluyen capturas de pantalla que ilustran el funcionamiento
 
 ![Salida de pruebas](Capturas/img1.png)  
 *Figura 1: Capturando dato de entrada en promp.*
+
 ![Salida de pruebas](Capturas/img2.png)  
 *Figura 2: Si no se ingreso la contraseña correcta.*
+
 ![Salida de pruebas](Capturas/img3.png)  
 *Figura 3: Intentos agotados.*
+
 ![Salida de pruebas](Capturas/img4.png)  
 *Figura 4: Se ingreso la contraseña correcta.*
 
