@@ -26,7 +26,7 @@ Este archivo contiene una actividad contemplando lo visto en la clase 3
 
 A continuación, se incluyen capturas de pantalla que ilustran el funcionamiento del archivo `actividad_3.js`:
 
-![Salida de pruebas](Capturas/img1.png)  
+![Salida de pruebas](Capturas/img.png)  
 *Figura 1: Resultados.*
 
 ## Referencias o recursos utilizados
