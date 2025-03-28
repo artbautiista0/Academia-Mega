@@ -26,7 +26,7 @@ Este archivo contiene lo visto en la clase 1 -> Declaración de variables
 
 A continuación, se incluyen capturas de pantalla que ilustran el funcionamiento del archivo `actividad_1.js`:
 
-![Salida de pruebas](Modulo_1_Javascript_Testing\01_sesion\Capturas\img.png)  
+![Salida de pruebas](Capturas\img.png)  
 *Figura 1: Resultados de las pruebas unitarias.*
 
 ## Referencias o recursos utilizados
