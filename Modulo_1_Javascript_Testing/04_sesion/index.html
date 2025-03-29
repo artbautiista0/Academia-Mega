@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tutorial básico de HTML">
+    <meta name="author" content="Academia Mega">
+    <title>HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Actividad 4 HTML</h1>
+        <p>Etiquetas básicas de HTML.</p>
+        <nav>
+            <ul>
+                <li><a href="#encabezados">Encabezados</a></li>
+                <li><a href="#listas">Listas</a></li>
+                <li><a href="#enlaces">Enlaces</a></li>
+                <li><a href="#imagenes">Imágenes</a></li>
+                <li><a href="#tablas">Tablas</a></li>
+                <li><a href="#formularios">Formularios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="encabezados">
+            <h2>Encabezados</h2>
+            <p>HTML tiene 6 niveles de encabezados:</p>
+            <article>
+                <h1>Encabezado 1</h1>
+                <h2>Encabezado 2</h2>
+                <h3>Encabezado 3</h3>
+                <h4>Encabezado 4</h4>
+                <h5>Encabezado 5</h5>
+                <h6>Encabezado 6</h6>
+            </article>
+        </section>
+
+        <section id="listas">
+            <h2>Listas</h2>
+            <p>Existen listas ordenadas y no ordenadas:</p>
+            <article>
+                <h3>Lista Ordenada</h3>
+                <ol>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                </ol>
+                <h3>Lista No Ordenada</h3>
+                <ul>
+                    <li>Elemento A</li>
+                    <li>Elemento B</li>
+                    <li>Elemento C</li>
+                </ul>
+            </article>
+        </section>
+
+        <section id="enlaces">
+            <h2>Enlaces</h2>
+            <p>Usa la etiqueta <code>&lt;a&gt;</code> para crear enlaces:</p>
+            <article>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Ir a Google</a>
+            </article>
+        </section>
+
+        <section id="imagenes">
+            <h2>Imágenes</h2>
+            <p>Usa la etiqueta <code>&lt;img&gt;</code> para mostrar imágenes:</p>
+            <article>
+                <figure>
+                    <img src="Capturas/img.jpg" alt="Imagen de ejemplo" width="300" height="200">
+                    <figcaption>Ejemplo de imagen</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section id="tablas">
+            <h2>Tablas</h2>
+            <p>Las tablas se crean con las etiquetas <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> y <code>&lt;td&gt;</code>:</p>
+            <article>
+                <table>
+                    <caption>Ejemplo de tabla</caption>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juan</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>María</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <section id="formularios">
+            <h2>Formularios</h2>
+            <p>Los formularios permiten la entrada de datos:</p>
+            <article>
+                <form action="/submit" method="post">
+                    <fieldset>
+                        <legend>Información Personal</legend>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required>
+                        <br>
+                        <label for="email">Correo:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br>
+                        <button type="submit">Enviar</button>
+                    </fieldset>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Contacto: <a href="mailto:info@academiamega.com">info@academiamega.com</a>
+        </address>
+        <p>&copy; HTML. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
