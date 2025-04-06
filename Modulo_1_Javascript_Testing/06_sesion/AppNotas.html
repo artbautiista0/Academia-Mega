@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplicación de Notas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      max-width: 500px;
+    }
+    li {
+      background: #f4f4f4;
+      margin: 5px 0;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    li button {
+      background: #e74c3c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mis Notas</h1>
+  <textarea id="noteInput" rows="4" placeholder="Escribe tu nota aquí..."></textarea>
+  <br>
+  <button id="saveBtn">Guardar Nota</button>
+  <button id="deleteAllBtn">Borrar Todas las Notas</button>
+
+  <!-- Mensaje dinámico según la existencia de notas -->
+  <p id="notesMessage"></p>
+  
+  <ul id="notesList"></ul>
+
+  <!-- Vincula el archivo JavaScript -->
+  <script src="app_notas.js"></script>
+</body>
+</html>
