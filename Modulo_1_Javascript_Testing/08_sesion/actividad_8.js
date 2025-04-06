@@ -12,6 +12,7 @@ async function fetchAllCharacters() {
         const data = await response.json();
         allCharacters.push(...data.results);
         url = data.info.next; // Si no hay más páginas, url se volverá null y se terminará el bucle
+        //console.log(data.results);
       } catch (error) {
         console.error('Error al obtener los datos:', error);
         break;
