@@ -1,7 +1,7 @@
 # JavaScript Testing - Módulo 1
 
 
-# Archivos `actividad_8.js`
+# Archivos `main.js` , `utils.js`
 
 Este archivo contiene las actividades contemplando lo visto en la clase 9
 
