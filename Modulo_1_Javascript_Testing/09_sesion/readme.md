@@ -15,7 +15,7 @@ Este archivo contiene las actividades contemplando lo visto en la clase 9
    - La idea es separar la lógica en archivos distintos para reutilizar funciones y mantener un código organizado.
 
 2. **Implementación del código**  
-    Se crearon dos archivos js uno donde se exportan unas funciones y otro donde se exportan
+    Se crearon dos archivos js uno donde se exportan unas funciones y otro donde se importan
 
 
 ## Problemas encontrados y soluciones implementadas
