@@ -24,7 +24,7 @@ Este archivo contiene las actividades contemplando lo visto en la clase 8
 
 ## Capturas de pantalla o diagramas relevantes
 
-A continuación, se incluyen capturas de pantalla que ilustran el funcionamiento de las activades
+A continuación, se incluyen capturas de pantalla que ilustran el funcionamiento de las actividades
 
 ![Salida de pruebas](Capturas/img.png)  
 *Figura 1: Captura de la actividad.*
