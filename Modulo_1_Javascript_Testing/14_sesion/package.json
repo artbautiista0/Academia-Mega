@@ -1,0 +1,11 @@
+{
+  "name": "tdd-invertir-texto",
+  "version": "1.0.0",
+  "description": "Ejemplo de TDD con función invertirTexto",
+  "main": "invertirTexto.js",
+  "scripts": {
+    "test": "node invertirTexto.test.js"
+  },
+  "author": "Arturo B",
+  "license": "MIT"
+}
