@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.contenedor {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 40px auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"], button {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+#errorMensaje {
+  color: red;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  height: 18px;
+}
+
+.resultado {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.excelente {
+  background-color: #c8e6c9; 
+  color: #2e7d32;
+}
+
+.advertencia {
+  background-color: #ffe0b2; 
+  color: #e65100;
+}
+
+.reprobado {
+  background-color: #ffcdd2; 
+  color: #b71c1c;
+}
+
+.aprobado {
+  background-color: #c8e6c9; 
+  color: #2e7d32;
+}
+
+.input-error {
+  border: 2px solid red;
+}
+
+.info {
+  background-color: yellow; 
+  color: rgb(0, 0, 0);
+}
