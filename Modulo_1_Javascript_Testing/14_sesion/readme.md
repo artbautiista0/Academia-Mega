@@ -1,7 +1,7 @@
 # JavaScript Testing - Módulo 1
 
 
-# Archivos `invertirTexto.js`  `invertir.test.js` , `test.framework.js` , `package.json`
+# Archivos `invertirTexto.js`  `invertirTexto.test.js` , `test.framework.js` , `package.json`
 
 Este archivo contiene una actividad contemplando lo visto en la clase 14
 
