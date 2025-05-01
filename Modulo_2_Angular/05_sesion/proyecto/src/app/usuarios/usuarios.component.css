@@ -1,0 +1,59 @@
+.contenedor {
+    display: flex;
+    gap: 20px;
+    padding: 5px;
+  }
+  
+  .columna {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .izquierda {
+    background-color: #f9f9f9;
+  }
+  
+  .derecha {
+    background-color: #eef6ff;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .rol {
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .admin {
+    color: white;
+    background-color: #4a148c;
+  }
+  
+  .editor {
+    color: white;
+    background-color: #0277bd;
+  }
+  
+  .lector {
+    color: white;
+    background-color: #388e3c;
+  }
+  
+  .desconocido {
+    color: black;
+    background-color: #e0e0e0;
+  }
+  
+  

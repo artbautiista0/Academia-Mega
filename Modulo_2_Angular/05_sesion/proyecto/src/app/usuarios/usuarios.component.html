@@ -1,0 +1,54 @@
+<div class="contenedor">
+    <div class="columna izquierda">
+      <h2>Usuarios</h2>
+  
+      <label>Filtrar por rol:</label>
+      <select [(ngModel)]="filtroRol">
+        <option value="">Todos</option>
+        <option value="admin">Admin</option>
+        <option value="editor">Editor</option>
+        <option value="lector">Lector</option>
+      </select>
+  
+      <button (click)="mostrarRoles = !mostrarRoles">
+        {{ mostrarRoles ? 'Ocultar' : 'Mostrar' }} roles
+      </button>
+  
+      <ul>
+        <li *ngFor="let user of usuariosFiltrados; let i = index">
+          <strong>{{ user.nombre }}</strong>
+          <div *ngIf="mostrarRoles">
+            Rol:
+            <span [ngSwitch]="user.rol">
+                <span *ngSwitchCase="'admin'" class="rol admin">Admin</span>
+                <span *ngSwitchCase="'editor'" class="rol editor">Editor</span>
+                <span *ngSwitchCase="'lector'" class="rol lector">Lector</span>
+                <span *ngSwitchDefault class="rol desconocido">Desconocido</span>
+            </span>
+          </div>
+  
+          <label>Cambiar a:</label>
+          <select [(ngModel)]="user.rol">
+            <option value="admin">Admin</option>
+            <option value="editor">Editor</option>
+            <option value="lector">Lector</option>
+          </select>
+  
+          <button (click)="eliminarUsuario(i)">Eliminar</button>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="columna derecha">
+      <h2>Agregar Usuario</h2>
+  
+      <input [(ngModel)]="nuevoNombre" placeholder="Nombre" />
+      <select [(ngModel)]="nuevoRol">
+        <option value="admin">Admin</option>
+        <option value="editor">Editor</option>
+        <option value="lector">Lector</option>
+      </select>
+      <button (click)="agregarUsuario()">Agregar</button>
+    </div>
+  </div>
+  
