@@ -1,0 +1,15 @@
+<h2>Interpolación</h2>
+<p>{{ mensaje }}</p> <!-- Interpolación -->
+
+<h2>Property Binding</h2>
+<!-- Enlazamos la propiedad 'title' del componente con la propiedad 'title' del elemento -->
+<h3 [title]="mensaje">Pasa el ratón sobre este texto</h3>
+
+<h2>Event Binding</h2>
+<button (click)="incrementar()">Incrementar</button>
+<p>Contador: {{ contador }}</p> <!-- Interpolación para mostrar el contador -->
+
+<h2>Two-way Binding</h2>
+<input [(ngModel)]="nombre" placeholder="Escribe tu nombre">
+<p>Nombre: {{ nombre }}</p>
+
