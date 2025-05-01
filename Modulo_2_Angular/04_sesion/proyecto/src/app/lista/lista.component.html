@@ -1,0 +1,35 @@
+<h2>Mis Tareas</h2>
+
+<button (click)="toggleLista()">
+  {{ mostrarLista ? 'Ocultar' : 'Mostrar' }} Lista
+</button>
+
+<div *ngIf="mostrarLista; else oculta">
+  <input [(ngModel)]="filtro" placeholder="Filtrar por título" />
+  <button (click)="alternarOrden()">
+    Ordenar: {{ ordenAscendente ? 'A-Z' : 'Z-A' }}
+  </button>
+
+  <ul>
+    <li *ngFor="let tarea of tareasFiltradasYOrdenadas; let i = index" (click)="seleccionarTarea(tarea)">
+      {{ tarea.titulo }}
+      <button (click)="eliminarTarea(i); $event.stopPropagation()">x</button>
+    </li>
+  </ul>
+
+  <div *ngIf="tareaSeleccionada">
+    <h4>Detalle:</h4>
+    <strong>{{ tareaSeleccionada.titulo }}</strong>
+    <p>{{ tareaSeleccionada.descripcion || 'Sin descripción.' }}</p>
+  </div>
+</div>
+
+<ng-template #oculta>
+  <p>La lista está oculta.</p>
+</ng-template>
+
+<hr />
+
+<input [(ngModel)]="nuevaTarea" placeholder="Nueva tarea" />
+<input [(ngModel)]="nuevaDescripcion" placeholder="Descripción" />
+<button (click)="agregarTarea()">Agregar</button>
