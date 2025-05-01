@@ -2,7 +2,7 @@
 
 # Proyecto 
 
-Este archivo contiene una actividad contemplando lo visto en la clase 4
+Este archivo contiene una actividad contemplando lo visto en la clase 5
 
 ## Objetivos 
 
