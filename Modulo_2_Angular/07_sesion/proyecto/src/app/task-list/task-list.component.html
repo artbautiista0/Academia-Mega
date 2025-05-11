@@ -1,0 +1,6 @@
+<h2>Mis tareas</h2>
+<app-task-item
+  *ngFor="let task of tasks; let i = index"
+  [task]="task"
+  (completed)="completarTarea(i)">
+</app-task-item>
