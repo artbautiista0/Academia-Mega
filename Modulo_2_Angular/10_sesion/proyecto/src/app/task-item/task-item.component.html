@@ -1,0 +1,11 @@
+<div>
+  <span [ngClass]="{ 'completed': task.completed }">{{ task.title }}</span>
+
+  <!-- Botón para alternar el estado de la tarea -->
+  <button (click)="toggleCompleted()">
+    {{ task.completed ? 'Desmarcar' : 'Marcar como completada' }}
+  </button>
+
+  <!-- Botón para eliminar la tarea -->
+  <button (click)="deleteTask()">Eliminar</button>
+</div>
