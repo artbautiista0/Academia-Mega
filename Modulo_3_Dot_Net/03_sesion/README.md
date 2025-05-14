@@ -33,7 +33,7 @@ A continuación, se incluyen capturas de pantalla que ilustran el funcionamiento
 ![Salida de pruebas](Capturas/img2.png)  
 *Figura 2: Probando endpoint "saludo".*
 
-![Salida de pruebas](Capturas/img2.png)  
+![Salida de pruebas](Capturas/img3.png)  
 *Figura 3: Probando endpoint "saludoParametro".*
 
 
