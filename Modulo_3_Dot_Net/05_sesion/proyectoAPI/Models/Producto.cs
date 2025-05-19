@@ -9,7 +9,7 @@
         //public int Stock { get; set; }
         //public string Categoria { get; set; }
         //public string ImagenUrl { get; set; }
-        public DateTime FechaCreacion { get; set; } = DateTime.Now;
+        //public DateTime FechaCreacion { get; set; } = DateTime.Now;
         //public bool Estado { get; set; } = true;
     }
 }

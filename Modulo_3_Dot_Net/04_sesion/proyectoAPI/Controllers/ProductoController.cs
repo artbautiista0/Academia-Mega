@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using proyectoAPI.Models;
-using proyectoAPI.Service;
 
 namespace proyectoAPI.Controllers
 {
@@ -16,20 +15,13 @@ namespace proyectoAPI.Controllers
             new Producto { Id = 3, Nombre = "Producto 3", Precio = 30.99m }
         };
 
-        private readonly ProductoService _productoService;
-        public ProductoController(ProductoService productoService)
-        {
-            _productoService = productoService;
-        }
-
         [HttpGet]
         [Route("Products")]
-        public async Task<IActionResult> GetProducts()
+        public ActionResult<Producto> GetProducts()
         {
             try
             {
-                var list = await _productoService.GetProductsAsync();
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = list });
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "OK", response = _productos });
             }
             catch (Exception e)
             {
@@ -39,9 +31,9 @@ namespace proyectoAPI.Controllers
 
         [HttpGet]
         [Route("GetProduct/{id}")]
-        public async Task<IActionResult> GetProductById(int id)
+        public ActionResult<Producto> GetProductById(int id)
         {
-            Producto? _producto = await _productoService.GetProductByIdAsync(id);
+            Producto? _producto = _productos.FirstOrDefault(item => item.Id == id);
 
             try
             {
@@ -61,11 +53,12 @@ namespace proyectoAPI.Controllers
 
         [HttpPost]
         [Route("CreateProduct")]
-        public async Task<IActionResult> CreateProduct(Producto _p)
+        public ActionResult CreateProduct(Producto _p)
         {
             try
-            {
-                await _productoService.CreateProductAsync(_p);
+            { 
+                _p.Id = _productos.Any() ? _productos.Max(producto => producto.Id) + 1 : 1;
+                _productos.Add(_p);
                 return StatusCode(StatusCodes.Status201Created, new { mensaje = "Producto creado exitosamente", response = _p });
             }
             catch (Exception e)
@@ -75,19 +68,22 @@ namespace proyectoAPI.Controllers
         }
 
         [HttpPut]
-        [Route("EditProduct")]
-        public async Task<IActionResult> EditProduct([FromBody] Producto actualizacion)
+        [Route("EditProduct/{id}")]
+        public IActionResult EditProduct(int id, [FromBody] Producto actualizacion) 
         {
             try
             {
-                var existingProduct = await _productoService.GetProductByIdAsync(actualizacion.Id);
-                if (existingProduct == null)
+                var Producto = _productos.FirstOrDefault(p => p.Id == id);
+                if (Producto == null)
                 {
                     return StatusCode(StatusCodes.Status404NotFound, new { mensaje = "Producto no encontrado" });
                 }
 
-                await _productoService.UpdateProductAsync(actualizacion);
-                return StatusCode(StatusCodes.Status200OK, new { mensaje = "Producto actualizado exitosamente", response = actualizacion });
+                Producto.Nombre = actualizacion.Nombre;
+                Producto.Precio = actualizacion.Precio;
+
+                return StatusCode(StatusCodes.Status200OK, new { mensaje = "Producto actualizado exitosamente", response = Producto });
+
             }
             catch (Exception e)
             {
@@ -97,16 +93,17 @@ namespace proyectoAPI.Controllers
 
         [HttpDelete]
         [Route("DeleteProduct/{id}")]
-        public async Task<IActionResult> DeleteProduct(int id)
+        public ActionResult DeleteProduct(int id)
         {
             try
             {
-                var deleteProduct = await _productoService.GetProductByIdAsync(id);
-                if (deleteProduct == null)
+                var producto = _productos.FirstOrDefault(p => p.Id == id);
+                if (producto == null)
                 {
                     return StatusCode(StatusCodes.Status404NotFound, new { mensaje = "Producto no encontrado" });
                 }
-                await _productoService.DeleteProductAsync(id);
+
+                _productos.Remove(producto);
                 return StatusCode(StatusCodes.Status200OK, new { mensaje = "Producto eliminado exitosamente" });
             }
             catch (Exception e)
