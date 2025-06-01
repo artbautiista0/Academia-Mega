@@ -78,11 +78,23 @@ namespace proyectoAPI.Controllers
         {
             var connectionString = _config.GetConnectionString("DefaultConnection");
 
-            // Hashear la contraseña
-            var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
-
             using var connection = new SqlConnection(connectionString);
             connection.Open();
+
+            // Validar si el usuario ya existe
+            var checkQuery = "SELECT COUNT(*) FROM Users WHERE UserName = @username";
+            using (var checkCommand = new SqlCommand(checkQuery, connection))
+            {
+                checkCommand.Parameters.AddWithValue("@username", request.Username);
+                int userCount = (int)checkCommand.ExecuteScalar();
+                if (userCount > 0)
+                {
+                    return Conflict("El nombre de usuario ya está en uso");
+                }
+            }
+
+            // Hashear la contraseña
+            var passwordHash = BCrypt.Net.BCrypt.HashPassword(request.Password);
 
             var query = "INSERT INTO Users (UserName, PassHash) VALUES (@username, @password)";
             using var command = new SqlCommand(query, connection);
@@ -93,6 +105,7 @@ namespace proyectoAPI.Controllers
 
             return Ok("Usuario registrado con éxito");
         }
+
 
     }
 
