@@ -1,0 +1,27 @@
+syntax = "proto3"
+
+option csharp_namespace = "ChatServer";
+
+package chat;
+
+message ChatRequest {
+  // The message to send
+  string message = 1;
+}
+
+message ChatMessage{
+// The message content
+  string content = 1;
+
+  // The sender's name
+  string sender = 2;
+
+  // The timestamp of the message
+  int64 timestamp = 3;
+}
+
+// The chat service definition.
+service ChatService {
+  // Sends a message
+  rpc SendMessage (ChatRequest) returns (ChatReply);
+}

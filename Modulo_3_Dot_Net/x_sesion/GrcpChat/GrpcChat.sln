@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcChat", "GrpcChat.csproj", "{724104C3-2404-407F-A285-16EC9F448EA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatServer", "..\ChatServer\ChatServer.csproj", "{FC5EA177-1C19-4F96-8618-102AF0A5E8F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "..\GrpcClient\GrpcClient.csproj", "{632B71B2-EBF0-4018-B84D-0FC0BE424B1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{724104C3-2404-407F-A285-16EC9F448EA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724104C3-2404-407F-A285-16EC9F448EA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724104C3-2404-407F-A285-16EC9F448EA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724104C3-2404-407F-A285-16EC9F448EA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC5EA177-1C19-4F96-8618-102AF0A5E8F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5EA177-1C19-4F96-8618-102AF0A5E8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5EA177-1C19-4F96-8618-102AF0A5E8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5EA177-1C19-4F96-8618-102AF0A5E8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{632B71B2-EBF0-4018-B84D-0FC0BE424B1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632B71B2-EBF0-4018-B84D-0FC0BE424B1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632B71B2-EBF0-4018-B84D-0FC0BE424B1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632B71B2-EBF0-4018-B84D-0FC0BE424B1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

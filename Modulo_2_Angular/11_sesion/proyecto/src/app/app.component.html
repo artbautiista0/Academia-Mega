@@ -1,0 +1,10 @@
+<div style="text-align: center; margin: 1rem;">
+  <button (click)="toggleForm()">
+    Cambiar a {{ showReactive ? 'Formulario Template-Driven' : 'Formulario Reactivo' }}
+  </button>
+</div>
+
+<div style="margin-top: 2rem;">
+  <app-reactive-form *ngIf="showReactive"></app-reactive-form>
+  <app-template-form *ngIf="!showReactive"></app-template-form>
+</div>

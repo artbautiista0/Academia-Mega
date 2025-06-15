@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "ChatService";
+
+package chat;
+
+// Mensaje de chat
+message ChatMessage {
+  string user = 1;
+  string message = 2;
+  int64 timestamp = 3;
+}
+
+// Solicitud vacía para iniciar el stream
+message Empty {}
+
+// Servicio de chat
+service Chat {
+  // Comunicación bidireccional para enviar y recibir mensajes
+  rpc ChatStream (stream ChatMessage) returns (stream ChatMessage);
+}

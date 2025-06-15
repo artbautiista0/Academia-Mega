@@ -1,0 +1,24 @@
+.container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-top: 0.2rem;
+}
+label {
+  margin-top: 1rem;
+  display: block;
+}
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+}
+.error {
+  color: red;
+  font-size: 0.85rem;
+}
